@@ -1,0 +1,5 @@
+pyspark>=3.4.0
+delta-spark>=2.4.0
+pandas>=1.5.0
+numpy>=1.23.0
+

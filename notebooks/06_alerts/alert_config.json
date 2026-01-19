@@ -1,0 +1,61 @@
+{
+  "alerts": [
+    {
+      "name": "revenue_anomaly",
+      "description": "Detect sudden revenue increases/decreases",
+      "enabled": true,
+      "threshold_percentage": 30,
+      "check_frequency": "daily",
+      "notification_channels": [
+        "email",
+        "slack"
+      ],
+      "recipients": [
+        "data-team@company.com",
+        "business-analytics@company.com"
+      ],
+      "severity": "medium"
+    },
+    {
+      "name": "order_volume_drop",
+      "description": "Detect significant drop in order volume",
+      "enabled": true,
+      "threshold_percentage": 20,
+      "check_frequency": "daily",
+      "notification_channels": [
+        "email"
+      ],
+      "recipients": [
+        "operations@company.com"
+      ],
+      "severity": "high"
+    },
+    {
+      "name": "review_score_drop",
+      "description": "Detect significant drop in review scores",
+      "enabled": true,
+      "threshold_percentage": 15,
+      "check_frequency": "weekly",
+      "notification_channels": [
+        "email",
+        "slack"
+      ],
+      "recipients": [
+        "customer-service@company.com"
+      ],
+      "severity": "medium"
+    }
+  ],
+  "notification_settings": {
+    "email": {
+      "smtp_server": "smtp.company.com",
+      "smtp_port": 587,
+      "from_address": "alerts@company.com"
+    },
+    "slack": {
+      "webhook_url": "https://hooks.slack.com/services/YOUR/WEBHOOK/URL",
+      "channel": "#data-alerts"
+    }
+  }
+}
+

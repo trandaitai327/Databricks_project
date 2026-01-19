@@ -1,0 +1,71 @@
+{
+  "dashboards": [
+    {
+      "name": "Revenue Trends Dashboard",
+      "description": "Daily and monthly revenue trends analysis",
+      "queries": [
+        {
+          "name": "Daily Revenue Trend",
+          "query_file": "queries/revenue_trends.sql",
+          "chart_type": "line",
+          "x_axis": "metric_date",
+          "y_axis": "total_revenue"
+        },
+        {
+          "name": "Revenue by State",
+          "query_file": "queries/revenue_by_state.sql",
+          "chart_type": "bar",
+          "x_axis": "customer_state",
+          "y_axis": "state_revenue"
+        },
+        {
+          "name": "Revenue by Product Category",
+          "query_file": "queries/revenue_by_category.sql",
+          "chart_type": "pie",
+          "value_column": "category_revenue",
+          "label_column": "product_category_name"
+        }
+      ]
+    },
+    {
+      "name": "Product Performance Dashboard",
+      "description": "Product sales and performance metrics",
+      "queries": [
+        {
+          "name": "Top Products by Revenue",
+          "query_file": "queries/product_performance.sql",
+          "chart_type": "bar",
+          "x_axis": "product_category_name",
+          "y_axis": "total_revenue"
+        },
+        {
+          "name": "Product Review Scores",
+          "query_file": "queries/product_reviews.sql",
+          "chart_type": "histogram",
+          "value_column": "avg_review_score"
+        }
+      ]
+    },
+    {
+      "name": "Customer Analytics Dashboard",
+      "description": "Customer segmentation and behavior analysis",
+      "queries": [
+        {
+          "name": "Customer Segmentation",
+          "query_file": "queries/customer_segmentation.sql",
+          "chart_type": "scatter",
+          "x_axis": "total_orders",
+          "y_axis": "lifetime_value"
+        },
+        {
+          "name": "Customers by State",
+          "query_file": "queries/customers_by_state.sql",
+          "chart_type": "bar",
+          "x_axis": "customer_state",
+          "y_axis": "customer_count"
+        }
+      ]
+    }
+  ]
+}
+
